@@ -1,0 +1,48 @@
+Write a “person” class to hold all the details.
+
+
+class Person
+{
+  constructor(firstName, lastName, age, country, city) 
+{
+    console.log(this) 
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+  }
+}
+
+const person1 = new Person('Asha', 'singh', 26, 'tamilnadu', 'chennai')
+
+console.log(person1)
+Person {firstName: "Asha", lastName: "singh", age: 26, country: "tamilnadu", city: "chennai"}
+
+write a class to calculate the Uber price.
+
+let baseFee = .44
+let cities = ["chennai", "malaysia", "singapore", ]
+let uberRates = [5, 10, 15]
+let customerName = "asha" 
+let customerCity = "singapore" 
+console.log("Hello", customerName+ ", welcome to the Uber Rate Program")
+
+function getRate(customerCity) 
+{
+  
+  function uberRate(customerCity, index) 
+{
+    
+    let finalRate = (uberRates[index]) * baseFee
+    return finalRate
+  }
+
+  console.log(customerCity, "rate is:", uberRate(customerCity, cities.indexOf(customerCity)))
+}
+
+getRate(customerCity)
+
+Output
+Hello Asha, welcome to the Uber Rate Program
+Providence rate is: 2.2
